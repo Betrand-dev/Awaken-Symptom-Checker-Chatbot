@@ -3,18 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const userInput = document.getElementById("userInput");
   const chatbox = document.getElementById("chatbox");
 
-  function appendMessage(message, sender) {
-    const msgDiv = document.createElement("div");
-    msgDiv.classList.add(sender + "-message");
+function appendMessage(message, sender) {
+  const msgDiv = document.createElement("div");
+  msgDiv.classList.add(sender + "-message");
 
-    const bubble = document.createElement("div");
-    bubble.classList.add("bubble");
+  const bubble = document.createElement("div");
+  bubble.classList.add("bubble");
+
+  if (sender === "bot") {
+    // Convert GPT markdown to HTML
+    bubble.innerHTML = marked.parse(message);
+  } else {
+    // User messages stay plain
     bubble.textContent = message;
-
-    msgDiv.appendChild(bubble);
-    chatbox.appendChild(msgDiv);
-    chatbox.scrollTop = chatbox.scrollHeight;
   }
+
+  msgDiv.appendChild(bubble);
+  chatbox.appendChild(msgDiv);
+  chatbox.scrollTop = chatbox.scrollHeight;
+}
+
 
   async function sendMessage() {
     const message = userInput.value.trim();

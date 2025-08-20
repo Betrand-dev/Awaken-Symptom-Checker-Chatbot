@@ -83,12 +83,7 @@ body {
   align-items: flex-start;
 }
 
-.bot-message .bubble {
-  background: #eaf3ff;
-  padding: 0.8rem 1rem;
-  border-radius: 15px 15px 15px 0;
-  max-width: 70%;
-}
+
 
 .user-message {
   justify-content: flex-end;
@@ -114,7 +109,7 @@ body {
   flex: 1;
   padding: 0.7rem 1rem;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 8px;
   outline: none;
 }
 
@@ -124,7 +119,7 @@ body {
   border: none;
   background: #1f77d0;
   color: white;
-  border-radius: 20px;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -132,6 +127,25 @@ body {
 .chat-input button:hover {
   background: #155fa4;
 }
+
+.bot-message .bubble {
+  background:  #eaf3ff;
+  border-radius: 15px 15px 15px 0;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.bot-message .bubble ul,
+.bot-message .bubble ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.bot-message .bubble strong {
+  font-weight: bold;
+  color: #222;
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
