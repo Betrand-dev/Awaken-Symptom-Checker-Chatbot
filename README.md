@@ -3,7 +3,7 @@
 enter thier symptoms and it replies them with possible causes , possible diseases and ways to 
 solve thier problems.
 # **Get Started**
-Awaken is a flask web app made with HTML, CSS and JAVASCRIPT.
+Awaken is a python flask web app made with HTML, CSS and JAVASCRIPT.
 to get started first clone the repo
 ```bash
 git clone https://github.com/Betrand-dev/Awaken-Symptom-Checker-Chatbot.git
