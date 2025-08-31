@@ -18,16 +18,25 @@ pip install Flask requests openai python-dotenv langdetect googletrans mysql-con
 ```
 ``Note`` : this project uses mysql-connector-python to connect to Xamp MySQL databse so you must have xamp install and start ``apache`` and ``mysql``
 # **Setting up project**
-[1] Get an api an api api key from ``openai``
-[2] Start xamp and open you broswer and create a database called ``awaken_db``
-[3] Next you need to create a file in the root directory and called it ``.env`` and in it write 
+1. Get an api an api api key from ``openai`` go to
+```link
+https://platform.openai.com/
+```
+
+2. Start xamp and open you broswer and create a database called ``awaken_db``
+```sql
+CREATE DATABASE awaken_db;
+```
+3. Next you need to create a file in the root directory and called it ``.env`` and in it write 
 ```env
-DB_HOST = localhost 
-DB_USER = root
-DB_PASSWORD =
-DB_NAME = awaken_db
-USE_TRANSLATION = 1
-OPENAI_API_KEY = 'your api key from openai '
+#environment variables
+SECRET_KEY=dev-secret
+DB_HOST=localhost 
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=awaken_db
+USE_TRANSLATION=1
+OPENAI_API_KEY='your api key from openai '
 ```
 # **Start project**
 start the project by running 
